@@ -1,0 +1,8 @@
+.card {
+    margin-top: 50%;
+}
+
+ul li {
+    display: inline-flex;
+    margin: 4px;
+}

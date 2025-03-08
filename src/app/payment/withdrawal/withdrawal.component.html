@@ -1,0 +1,51 @@
+<div class="container">
+    <h1><button mat-icon-button (click)="onGoBack()"><mat-icon>arrow_back</mat-icon></button> </h1>
+    <div class="px-2">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <h2>Withdrawal</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="alert alert-primary d-flex align-items-center"
+                    role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+                        <use xlink:href="#info-fill" />
+                    </svg>
+                    <div class="text-center">
+                        You list is empty !
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-12">
+                <!-- LODING STATE -->
+                <div >
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex-justify-content-center">
+            <div class="col-md-12">
+                <div class="mb-2">
+                    <mat-form-field  >
+                        <mat-label>Amount</mat-label>
+                        <input type="number" matInput formControlName="amount"  />
+                        <mat-error>Amount cannot be empty</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <button mat-stroked-button color="primary" (click)="onWithdraw()">Withdraw</button>
+            </div>
+        </div>
+        
+    </div>
+</div>

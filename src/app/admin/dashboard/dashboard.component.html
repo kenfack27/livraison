@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="px-2">
+        <div class="row mb-2 mt-2">
+            <div class="col d-flex justify-content-between">
+                <h1>
+                    Home
+                </h1>
+                <h3>Hello, {{ username}}</h3>
+                <!-- <button (click)="onGoBack()" mat-icon-button> <mat-icon>arrow_back</mat-icon></button>Home -->
+            </div>
+        </div>
+        <!-- Annalytic  SALE-->
+        <div class="row">
+            <div class="col-md-6 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h3>Sale</h3>
+                            <span class="amount text-center text-success">{{totalsale | customCurrency }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--END Insigh  SALE -->
+
+        <!-- Insight purchase -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <mat-icon>shopping_cart</mat-icon>
+                            <div><span class="amount text-center">{{purchaseAmount | customCurrency }}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end purchase-->
+
+        <div class="row mb-2">
+            <!-- <div class="col-md-6 mb-2">
+                <h2>Seller Per Month</h2>
+                <div class="card-insight d-flex justify-content-center">
+                    <canvas id="acquisitions"></canvas>
+                </div>
+            </div> -->
+            <div class="col-md-6">
+                <h2>Most Seller Product</h2>
+                <div class="card-insight d-flex justify-content-center">
+                    <canvas id="mostSeller"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

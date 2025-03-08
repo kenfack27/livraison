@@ -1,0 +1,15 @@
+mat-list-item{
+    /* box-shadow: 3px 3px 3px #333; */
+    border: 2px solid #eee;
+    border-radius: 15px;
+    margin-bottom: 4px;
+    background: #fff;
+    
+}
+
+mat-list{
+    
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #eee;
+}

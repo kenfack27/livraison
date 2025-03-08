@@ -1,0 +1,32 @@
+ul li {
+    list-style: none;
+}
+
+.menu-footer {
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 575px) {
+    .menu-footer {
+        visibility: visible;
+    }
+
+    .menu-footer {
+        background: #f3f3f3;
+    }
+
+
+    .menu-footer ul li {
+        margin: 8px;
+        box-shadow: 5px 5px 5px 0.1px #333;
+        border-radius: 50%;
+        border: 1px solid #eee;
+    }
+
+    .menu-footer ul li:hover {
+        box-shadow: none;
+    }
+
+
+}

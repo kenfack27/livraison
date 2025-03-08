@@ -1,0 +1,62 @@
+.container {
+  background: #fff;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #333;
+  height: 100px;
+  padding: 20px 0px 0px 0px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px #555;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+
+.amount {
+  font-weight: 900;
+  color: #ec437c;
+}
+
+button {
+  border-radius: 10px;
+}
+
+.detail {
+  /* position: absolute; */
+  bottom: 10px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.badge {
+  height: 20px;
+}
+
+.list .list-item {
+  box-shadow: 5px 5px 10px #333;
+  cursor: pointer;
+  /* padding: 20px 0px 0px 10px; */
+}
+
+.list-item {
+  border-radius: 15px;
+  height: 90px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.list .list-item:hover {
+  box-shadow: none;
+}

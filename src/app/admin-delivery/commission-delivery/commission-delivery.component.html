@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-list>
+
+                <div mat-subheader><h2>My Commissions</h2></div>
+              
+                <mat-list-item *ngFor="let note of commissions">
+                    <!-- <mat-icon matListItemIcon>My Commissions</mat-icon> -->
+                    <div matListItemTitle><span class="amount " >{{note.amount | customCurrency}}</span></div>
+                    <div matListItemLine><span class="text-muted">{{note.createdAt | date}}</span></div>
+                </mat-list-item>
+                
+                <div *ngIf="commissions.length === 0" class="alert alert-primary d-flex align-items-center"
+                        role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+                            <use xlink:href="#info-fill" />
+                        </svg>
+                        <div class="text-center">
+                           No commission yet !
+                        </div>
+                    </div>
+               
+            </mat-list>
+        </div>
+    </div>
+</div>

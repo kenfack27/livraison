@@ -1,0 +1,38 @@
+<nav class="navbar fixed-bottom  menu-footer">
+    <!-- fixed-bottom -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center footer">
+                    <ul class="d-flex justify-content-between">
+                      
+                        <li>
+                            <button mat-icon-button (click)="onGoHome()" >
+                                <mat-icon>home</mat-icon>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button mat-icon-button (click)="onCheckout()" >
+                                <mat-icon>shopping_cart</mat-icon>
+                            </button>
+                        </li>
+
+
+                        <li>
+                            <button mat-icon-button matTooltip="help">
+                                <mat-icon>help</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" mat-icon-button matTooltip="Find store here"
+                                routerLink="/service/find-store">
+                                <mat-icon>assistant_navigation</mat-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

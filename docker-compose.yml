@@ -1,0 +1,18 @@
+services:
+  fast-gaz-ui:
+    container_name: fastgaz-frontend
+    build: .
+    image: dongmomartial/fastgaz-frontend:v1
+    restart: unless-stopped
+    ports:
+      - 30003:80
+      - 30004:80
+    expose:
+      - 30003
+      - 30004
+    networks:
+      - networks-fastgaz
+    
+networks:
+  networks-fastgaz:
+    driver: bridge

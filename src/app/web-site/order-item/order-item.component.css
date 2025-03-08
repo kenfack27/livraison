@@ -1,0 +1,63 @@
+.price {
+    font-weight: bold;
+    color: #009879;
+}
+
+h1 {
+    font-weight: 700;
+    color: #ff4081;
+}
+
+h2 {
+    font-weight: 600;
+}
+h3{
+    color: #ff4081;
+    font-weight: 700;
+}
+
+
+.box-shadow {
+    box-shadow: 5px 5px 5px #333;
+    background-color: #fff;
+}
+
+
+/* Button chechout */
+
+
+.product-image {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+}
+
+mat-nav-list a {
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 5px #333;
+    border-radius: 15px;
+}
+
+mat-nav-list a:hover {
+    box-shadow: none;
+}
+
+.button-see-invoice {
+    border-radius: 15px;
+}
+
+.checkout {
+    border-radius: 15px;
+}
+.container{
+    max-height: 1000vh;
+}
+
+
+@media screen and (max-width: 575px) {
+    .checkout {
+        width: 100%;
+        border-radius: 15px;
+    }
+}
