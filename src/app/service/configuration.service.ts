@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { environment } from 'src/environments/environment.development';
 import { Configuration } from '../model/configuration';
 import { CustomResponse } from '../model/custom-response';
 import { tap } from 'rxjs';
@@ -10,8 +9,9 @@ import { tap } from 'rxjs';
   providedIn: 'root'
 })
 export class ConfigurationService {
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  private readonly apiUrl = environment.URL + '/configuration';
+  private readonly apiUrl = this.url + '/configuration';
   constructor(private http: HttpClient) { }
 
   // Fonction pour charger la configuration

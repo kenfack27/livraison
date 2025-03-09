@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 import { Observable, tap } from 'rxjs';
 
@@ -8,8 +7,9 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class DeliveryNoSecureService {
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  private readonly URL = environment.URL + `/no-secure-delivery`;
+  private readonly URL = this.url + `/no-secure-delivery`;
 
 
   constructor(private http: HttpClient) { }

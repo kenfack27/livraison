@@ -1,7 +1,6 @@
 import { HttpClient, HttpContext, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 import { catchError, tap } from 'rxjs/operators';
 import { CustomerOrder } from '../model/customerOrder';
@@ -13,8 +12,9 @@ import { ApproveCustomerOrder } from '../model/request/request-approave-order';
   providedIn: 'root'
 })
 export class CustomerOrderSecureService {
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  private readonly URL = environment.URL + `/customer-order`;
+  private readonly URL = this.url + `/customer-order`;
 
   constructor(private http: HttpClient) { }
 

@@ -2,7 +2,6 @@ import { HttpClient, HttpContext, HttpErrorResponse } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
-import { environment } from 'src/environments/environment.development';
 import { Purchase } from '../model/purchase';
 import { CustomPageResponse } from '../model/custom-response-page';
 import { Page } from '../model/page';
@@ -13,8 +12,9 @@ import { PurchaseRequest } from '../model/request/purchase-request';
   providedIn: 'root'
 })
 export class PurchaseService {
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  private readonly URL = environment.URL + `/purchase`;
+  private readonly URL = this.url + `/purchase`;
 
   constructor(private http: HttpClient) { }
 

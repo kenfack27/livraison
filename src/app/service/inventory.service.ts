@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { CustomResponse } from "../model/custom-response";
 import { Observable } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
-import { environment } from 'src/environments/environment.development';
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { CustomPageResponse } from "../model/custom-response-page";
 import { Page } from "../model/page";
@@ -12,9 +11,9 @@ import { Inventory } from "../model/inventory";
     providedIn: 'root'
 })
 export class inventoryService {
+    private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-    private readonly URL = environment.URL + `/inventory`;
-
+    private readonly URL = this.url + `/inventory`;
     constructor(private http: HttpClient) { }
 
 

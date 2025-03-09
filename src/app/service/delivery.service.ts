@@ -2,7 +2,6 @@ import { HttpClient, HttpContext, HttpErrorResponse } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 import { DeliveryRequest } from '../model/request/delivery-request';
 
@@ -11,9 +10,10 @@ import { DeliveryRequest } from '../model/request/delivery-request';
 })
 export class DeliveryService {
 
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
 
-  private readonly URL = environment.URL + `/delivery`;
+  private readonly URL = this.url + `/delivery`;
 
 
   constructor(private http: HttpClient) { }

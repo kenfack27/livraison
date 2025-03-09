@@ -1,7 +1,6 @@
 import { HttpClient, HttpContext, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, catchError, tap } from "rxjs";
-import { environment } from "src/environments/environment.development";
 import { CustomResponse } from "../model/custom-response";
 import { StoreRequest } from "../model/request/storeRequest";
 import { CustomPageResponse } from "../model/custom-response-page";
@@ -13,8 +12,9 @@ import { StoreUpdateRequest } from "../model/request/store-update-request";
     providedIn: 'root'
 })
 export class StoreService {
+    private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-    private readonly URL = environment.URL + `/stores`;
+    private readonly URL = this.url+ `/stores`;
     private readonly STORE_ID = "STORE_ID";
     customerOrderService: any;
 

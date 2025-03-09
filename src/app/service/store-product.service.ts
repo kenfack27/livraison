@@ -1,15 +1,15 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, tap } from 'rxjs';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoreProductService {
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  private readonly URL = environment.URL + `/store-product`;
+  private readonly URL = this.url+ `/store-product`;
 
 
   constructor(private http: HttpClient) { }

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 
 @Injectable({
@@ -10,9 +9,10 @@ import { CustomResponse } from '../model/custom-response';
 export class PasswordService {
 
 
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
 
-  readonly URL: string = environment.URL + `/password`;
+  readonly URL: string = this.url+ `/password`;
 
   constructor(private http: HttpClient) { }
 

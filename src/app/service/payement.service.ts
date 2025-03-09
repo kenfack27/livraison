@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
-import { environment } from 'src/environments/environment.development';
 import { PaymentData } from '../model/request/payment-data';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
@@ -11,8 +10,9 @@ import { tap } from 'rxjs';
   providedIn: 'root'
 })
 export class PayementService {
-  private baseUrl = environment.URL + '/payments';
-  private URL = environment.URL + '/store-payments';
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
+
+  private baseUrl = this.url + '/payments';
   constructor(private http: HttpClient) { }
 
   async makePayment(paymentData: any) {
@@ -31,7 +31,7 @@ export class PayementService {
   }
 
   public paymentByStore$(storeId: number): Observable<CustomResponse> {
-    return this.http.get<any>(`${this.URL}/payment-list?storeId=${storeId}`)
+    return this.http.get<any>(`${this.url}/payment-list?storeId=${storeId}`)
       .pipe(
         tap(console.log)
       )

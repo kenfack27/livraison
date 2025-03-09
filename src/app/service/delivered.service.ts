@@ -3,7 +3,6 @@ import { DeliveredRequest } from '../model/request/delivered-request';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 import { CustomPageResponse } from '../model/custom-response-page';
 import { Delivered } from '../model/delivered';
@@ -15,8 +14,9 @@ import { Page } from '../model/page';
 export class DeliveredService {
 
 
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  private readonly URL = environment.URL + `/delivered`;
+  private readonly URL = this.url + `/delivered`;
 
 
   constructor(private http: HttpClient) { }

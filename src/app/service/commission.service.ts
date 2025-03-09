@@ -1,6 +1,5 @@
 import { HttpClient, HttpContext } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 import { Observable } from 'rxjs';
 
@@ -8,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommissionService {
-
-  private readonly URL = environment.URL + `/commission`;
+    private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
+  private readonly URL = this.url + `/commission`;
 
   constructor(private http: HttpClient) { }
 

@@ -1,7 +1,6 @@
 import { HttpClient, HttpContext } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { environment } from 'src/environments/environment.development';
 import { CustomResponse } from '../model/custom-response';
 import { CustomPageResponse } from '../model/custom-response-page';
 import { Page } from '../model/page';
@@ -11,8 +10,9 @@ import { Users } from '../model/users';
   providedIn: 'root'
 })
 export class UsersService {
+  private url='https://kapexpert.cloud:8087/api/v1/fast-gaz';
 
-  readonly URL: string = environment.URL + `/users`;
+  readonly URL: string = this.url + `/users`;
   isLoggedIn = false;
   isValidToken = false;
   private readonly tokenKey: string = 'FAST__GAZ_API_TOKEN';
