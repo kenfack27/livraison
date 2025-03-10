@@ -7,6 +7,12 @@ const config: CapacitorConfig = {
   server: {
     url: 'https://kapexpert.cloud:30004/',
     cleartext: true
+  },
+  android: {
+    fullscreen: false
+  },
+  ios: {
+    fullscreen: false
   }
 };
 
