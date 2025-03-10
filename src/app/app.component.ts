@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ApiApiService } from './service/api-api.service';
 import { CountryInfo } from './model/utils/country-info';
 import { Position } from './model/utils/position';
-import { StatusBar } from '@capacitor/status-bar';
+import { StatusBar,Style } from '@capacitor/status-bar';
+import { Platform } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
@@ -11,14 +13,17 @@ import { StatusBar } from '@capacitor/status-bar';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private platform: Platform) {
+   constructor(
+    private platform: Platform,
+    private apiIp: ApiApiService
+  ) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       StatusBar.setOverlaysWebView({ overlay: false }); // Empêche le contenu de passer sous la barre
-      StatusBar.setStyle({ style: 'dark' }); // Icônes noires (ou 'light' pour fond sombre)
+      StatusBar.setStyle({ style: Style.Dark });
     });
   }
 
@@ -37,7 +42,6 @@ export class AppComponent implements OnInit {
   currentInfo: CountryInfo;
   ip: string;
 
-  constructor(private apiIp: ApiApiService) { }
 
 
   ngOnInit(): void {
