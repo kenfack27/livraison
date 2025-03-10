@@ -11,8 +11,16 @@ import { StatusBar } from '@capacitor/status-bar';
 })
 export class AppComponent implements OnInit {
 
-  StatusBar.setOverlaysWebView({ overlay: false });  // La barre ne doit pas être recouverte
-  StatusBar.setStyle({ style: 'dark' });  // Icônes en noir sur fond clair (ou "light" si fond sombre)
+  constructor(private platform: Platform) {
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      StatusBar.setOverlaysWebView({ overlay: false }); // Empêche le contenu de passer sous la barre
+      StatusBar.setStyle({ style: 'dark' }); // Icônes noires (ou 'light' pour fond sombre)
+    });
+  }
 
   positions: Position[] = [
     {
